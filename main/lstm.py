@@ -49,7 +49,6 @@ def get_notes():
     return notes
 
 def prepare_sequences(notes, n_vocab):
-    """ Prepare the sequences used by the Neural Network """
     sequence_length = 100
 
     pitchnames = sorted(set(item for item in notes))
@@ -75,7 +74,6 @@ def prepare_sequences(notes, n_vocab):
     return (network_input, network_output)
 
 def create_network(network_input, n_vocab):
-    """ create the structure of the neural network """
     model = Sequential()
     model.add(LSTM(
         512,
@@ -98,7 +96,6 @@ def create_network(network_input, n_vocab):
     return model
 
 def train(model, network_input, network_output):
-    """ train the neural network """
     filepath = "weights/weights-improvement-{epoch:02d}-{loss:.4f}-bigger.hdf5"
     checkpoint = ModelCheckpoint(
         filepath,
