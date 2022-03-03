@@ -1,6 +1,6 @@
 # Music-generation-using-machine-learning
-# dependancies: 
+Dependancies: 
 1. Keras
-2. music21
-3. numpy
+2. Music21
+3. Numpy
  
